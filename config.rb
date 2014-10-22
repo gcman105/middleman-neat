@@ -80,6 +80,6 @@ configure :build do
     ]
   }
   
-  activate :imageoptim
+  # activate :imageoptim
 
 end
