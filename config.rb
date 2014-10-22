@@ -1,13 +1,4 @@
 ###
-# Compass
-###
-
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
-
-###
 # Page options, layouts, aliases and proxies
 ###
 
@@ -36,16 +27,17 @@
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  activate :livereload
+end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  # Gets partials from the _partials directory
+  def _partial(partial_filename)
+    partial "_partials/#{partial_filename}"
+  end
+end
 
 set :css_dir, 'stylesheets'
 
@@ -65,8 +57,29 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+  
+  # Create favicon and device-specific icons
+  activate :favicon_maker, :icons => {
+    "favicon_template.png" => [
+      { icon: "apple-touch-icon-152x152-precomposed.png" },
+      { icon: "apple-touch-icon-144x144-precomposed.png" },
+      { icon: "apple-touch-icon-114x114-precomposed.png" },
+      { icon: "apple-touch-icon-72x72-precomposed.png" },
+      { icon: "favicon-196x196.png" },
+      { icon: "favicon-160x160.png" },
+      { icon: "favicon-96x96.png" },
+      { icon: "favicon-32x32.png" },
+      { icon: "favicon-16x16.png" },
+      { icon: "favicon.png", size: "16x16" },
+      { icon: "favicon.ico", size: "64x64,32x32,24x24,16x16" },
+      { icon: "mstile-144x144", format: "png" },
+    ]
+  }
+  
+  activate :imageoptim
+
 end
