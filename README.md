@@ -5,18 +5,6 @@ middleman-neat
 
 **middleman-neat** is a [Middleman 3.x](http://middlemanapp.com/) project template with [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), [Bitters](http://bitters.bourbon.io/), [SASS](http://sass-lang.com/), [HAML](http://haml-lang.com/) and [Coffeescript](http://coffeescript.org). As with all Middleman templates, using [Bundler](http://gembundler.com/) and [RVM](http://rvm.io/) or [Rbenv](https://github.com/sstephenson/rbenv/) is recommended.
 
-###Features###
-* Optimized asset structure
-* Conditional IE html tags
-* Viewport meta setup for iOS and Android
-* Favicon and app icons
-* Dynamic title attribute body class via YAML front-matter
-
-###Includes###
-* Modernizr 2.6.2 via cdnjs.com
-* jQuery 2.0.3 via cdnjs.com
-* Google Analytics (async)
-
 ### Installation ###
  
 Clone **middleman-neat** into `~/.middleman`. You will need to create this directory if it doesn't exist.

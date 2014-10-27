@@ -5,7 +5,7 @@
 $visual-grid: true
 $visual-grid-color: yellow
 $visual-grid-index: front
-$visual-grid-opacity: 0.2
+$visual-grid-opacity: 0.1
 
 @import "bourbon/bourbon"
 @import "base/grid-settings"
@@ -14,8 +14,11 @@ $visual-grid-opacity: 0.2
 
 @import "_partials/footer"
 
+body
+  /* background: #d4d4d4 url("../images/background.png")
+
 #wrap
   @include outer-container
-
-body
-  background: #d4d4d4 url("../images/background.png")
+  
+.welcome
+  @include span-columns(12)
